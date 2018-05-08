@@ -13,7 +13,7 @@
         <!--Search-->
         <scene sceneID="vDf-hr-6ig">
             <objects>
-                <tableViewController id="AF3-yg-qFZ" sceneMemberID="viewController">
+                <tableViewController id="AF3-yg-qFZ" customClass="SearchTableViewController" customModule="MusicPlayerII" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="8dC-jf-54o">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
