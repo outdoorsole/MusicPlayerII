@@ -6,10 +6,11 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Search-->
         <scene sceneID="vDf-hr-6ig">
             <objects>
                 <tableViewController id="AF3-yg-qFZ" sceneMemberID="viewController">
@@ -32,13 +33,65 @@
                             <outlet property="delegate" destination="AF3-yg-qFZ" id="XcQ-LG-oHL"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Xha-o1-e1B"/>
+                    <navigationItem key="navigationItem" title="Search" id="eM0-ld-NlH"/>
+                    <connections>
+                        <segue destination="eap-K3-Ehc" kind="show" identifier="nowPlayingSegue" id="efC-WW-Pru"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lcw-DZ-1ch" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="556" y="116"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Now Playing-->
+        <scene sceneID="Rop-pD-Xbe">
+            <objects>
+                <viewController id="eap-K3-Ehc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YDo-m3-NdD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzV-Yu-7Io">
+                                <rect key="frame" x="166" y="100" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Track" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9aM-mW-0NB">
+                                <rect key="frame" x="166" y="155" width="43" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Album" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MrQ-eW-M7v">
+                                <rect key="frame" x="166" y="209" width="49" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ynd-nJ-uiE">
+                                <rect key="frame" x="67" y="292" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ouk-73-iAB">
+                                <rect key="frame" x="132" y="449" width="111" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add to Favorites"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="COF-AZ-ezl"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Now Playing" id="K5k-1P-y8h"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QE9-Va-iT9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1265" y="114"/>
+        </scene>
+        <!--Favorites-->
         <scene sceneID="S6B-CX-CIc">
             <objects>
                 <tableViewController id="0b5-9q-Nce" sceneMemberID="viewController">
@@ -61,17 +114,17 @@
                             <outlet property="delegate" destination="0b5-9q-Nce" id="PBM-n2-uMy"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="QbP-ZN-8Tw"/>
+                    <navigationItem key="navigationItem" title="Favorites" id="vQz-S6-0hf"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Gp-4I-eRV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="556" y="785"/>
         </scene>
-        <!--Item-->
+        <!--Search-->
         <scene sceneID="iLg-Pw-G69">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f1z-Tb-S3n" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="c0s-p0-CCX"/>
+                    <tabBarItem key="tabBarItem" title="Search" id="c0s-p0-CCX"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XfL-A3-WmX">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -86,11 +139,11 @@
             </objects>
             <point key="canvasLocation" x="-143" y="116"/>
         </scene>
-        <!--Item-->
+        <!--Favorites-->
         <scene sceneID="gPQ-fM-yoh">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="l2o-Md-jDG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="uNi-fI-T4y"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" id="uNi-fI-T4y"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QCx-gf-3XR">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
