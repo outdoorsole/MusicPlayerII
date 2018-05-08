@@ -66,7 +66,7 @@
         <!--Now Playing-->
         <scene sceneID="Rop-pD-Xbe">
             <objects>
-                <viewController id="eap-K3-Ehc" sceneMemberID="viewController">
+                <viewController id="eap-K3-Ehc" customClass="NowPlayingViewController" customModule="MusicPlayerII" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YDo-m3-NdD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,6 +107,12 @@
                         <viewLayoutGuide key="safeArea" id="COF-AZ-ezl"/>
                     </view>
                     <navigationItem key="navigationItem" title="Now Playing" id="K5k-1P-y8h"/>
+                    <connections>
+                        <outlet property="albumArtView" destination="ynd-nJ-uiE" id="nHU-4M-lDC"/>
+                        <outlet property="albumLabel" destination="MrQ-eW-M7v" id="mH8-Gd-5ne"/>
+                        <outlet property="artistLabel" destination="dzV-Yu-7Io" id="dPB-5M-ktT"/>
+                        <outlet property="trackLabel" destination="9aM-mW-0NB" id="Ea7-Mg-T0F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QE9-Va-iT9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
