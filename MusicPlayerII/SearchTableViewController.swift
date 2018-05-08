@@ -8,8 +8,12 @@
 
 import UIKit
 
-class SearchTableViewController: UITableViewController {
+class SearchTableViewController: UITableViewController, UISearchBarDelegate {
 
+    var searchName: String?
+    var currentTracks: [Track] = []
+    var selectedRow = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -23,17 +27,22 @@ class SearchTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return currentTracks.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "trackCell", for: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = "Late Night Alumni"
-        cell.detailTextLabel?.text = "Days"
+        cell.textLabel?.text = currentTracks[indexPath.row].artistName
+        cell.detailTextLabel?.text = currentTracks[indexPath.row].trackName
         
         return cell
+    }
+    
+    // MARK: - Search Bar method
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        print("search bar search button pressed")
     }
 
     // MARK: - Navigation
