@@ -42,6 +42,9 @@ class SearchTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print("prepare for segue called")
         // Get the new view controller using segue.destinationViewController.
+        if let destination = segue.destination as? NowPlayingViewController {
+            print(destination)
+        }
         // Pass the selected object to the new view controller.
     }
 
