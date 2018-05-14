@@ -9,14 +9,18 @@
 import Foundation
 
 // Struct modeled to store data from one track returned from Apple Music API
-struct Track {
-    let artistName: String?
-    let trackName: String?
-    let artworkUrl60: String?
+struct Track: Codable {
+    let artist: String?
+    let track: String?
+    let artwork: String?
+    let previewURL: String?
+    let collectionName: String?
     
     enum CodingKeys: String, CodingKey {
-        case artist
-        case track
-        case artwork
+        case artist = "artistName"
+        case track = "trackName"
+        case artwork = "artworkUrl60"
+        case previewURL = "previewUrl"
+        case collectionName = "collectionName"
     }
 }

@@ -3,13 +3,13 @@
 //  MusicPlayerII
 //
 //  Created by Maribel Montejano on 5/7/18.
-//  Copyright © 2018 Maribel Montejano. All rights reserved.
+//  Copyright © 2018 Maribel Montejano. All rights reserved. 
 //
 
 import Foundation
 
 // iTunes Search base URL
-let iTunesSearchBaseURL = URL(string: "http://itunes.apple.com/search")
+let iTunesSearchBaseURL = URL(string: "https://itunes.apple.com/search")!
 
 // URL extension: Use search queries to construct new URL (with key/value pairs as parameters)
 extension URL {
@@ -28,8 +28,8 @@ func createURL(name: String) -> URL? {
     let iTunesQuery: [String: String] = [
         "term": name,
         "media": "music",
-        "lang": "us_en",
+        "lang": "en_us",
         "limit": "100"
     ]
-    return iTunesSearchBaseURL?.withQueries(iTunesQuery)
+    return iTunesSearchBaseURL.withQueries(iTunesQuery)
 }

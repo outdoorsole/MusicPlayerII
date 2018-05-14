@@ -34,8 +34,8 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "trackCell", for: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = currentTracks[indexPath.row].artistName
-        cell.detailTextLabel?.text = currentTracks[indexPath.row].trackName
+        cell.textLabel?.text = currentTracks[indexPath.row].artist
+        cell.detailTextLabel?.text = currentTracks[indexPath.row].track
         
         return cell
     }
@@ -43,6 +43,10 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
     // MARK: - Search Bar method
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         print("search bar search button pressed")
+        if let searchTerm = searchBar.text {
+            search(term: searchTerm)
+        }
+        searchBar.resignFirstResponder()
     }
 
     // MARK: - Navigation
@@ -56,5 +60,32 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
         }
         // Pass the selected object to the new view controller.
     }
-
+    
+    // MARK: - Helper method
+    func search(term: String) {
+        if let url = createURL(name: term) {
+            let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+                print("in the completion handler for data task")
+                
+                if let error = error {
+                    print(error)
+                    return
+                }
+                
+                if let data = data {
+                    print(data)
+                    let jsonDecoder = JSONDecoder()
+                    
+                    if let result = try? jsonDecoder.decode(Results.self, from: data) {
+                        print(result)
+                        self.currentTracks = result.results
+                        DispatchQueue.main.async {
+                            self.tableView.reloadData()
+                        }
+                    }
+                }
+            }
+            task.resume()
+        }
+    }
 }

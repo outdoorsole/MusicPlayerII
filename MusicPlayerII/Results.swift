@@ -10,7 +10,7 @@ import Foundation
 
 // Struct modeled to store query data from Apple Music API:
 // 1) number of tracks (resultCount) and 2) array of tracks (results)
-struct Results {
+struct Results: Codable {
     let resultCount: Int
     let results: [Track]
     
