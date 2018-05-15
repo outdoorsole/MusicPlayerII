@@ -14,6 +14,8 @@ class NowPlayingViewController: UIViewController {
     @IBOutlet weak var albumLabel: UILabel!
     @IBOutlet weak var albumArtView: UIView!
     
+    var currentTrack: Track?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

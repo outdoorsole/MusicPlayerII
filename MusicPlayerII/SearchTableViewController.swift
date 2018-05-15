@@ -40,6 +40,12 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("row \(indexPath.row) was tapped")
+        selectedRow = indexPath.row
+        performSegue(withIdentifier: "nowPlayingSegue", sender: nil)
+    }
+    
     // MARK: - Search Bar method
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         print("search bar search button pressed")
@@ -57,6 +63,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
         // Get the new view controller using segue.destinationViewController.
         if let destination = segue.destination as? NowPlayingViewController {
             print(destination)
+            destination.currentTrack = currentTracks[selectedRow]
         }
         // Pass the selected object to the new view controller.
     }
