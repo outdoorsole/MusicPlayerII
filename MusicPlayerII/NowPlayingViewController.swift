@@ -74,6 +74,8 @@ class NowPlayingViewController: UIViewController {
             // if no duplicate found, then append the new track
             if duplicateTrackId == nil {
                 favorites.favoriteTracks.append(currentTrack!)
+                // save the favorite track to disk
+                favorites.save()
             }
         }
     }
