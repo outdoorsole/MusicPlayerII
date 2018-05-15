@@ -49,6 +49,9 @@ class FavoritesTableViewController: UITableViewController {
         if editingStyle == .delete {
             // Delete the row from the data source
             favorites.favoriteTracks.remove(at: indexPath.row)
+            // save the change to file
+            favorites.save()
+            // animate the table view
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
