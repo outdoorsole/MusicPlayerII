@@ -74,44 +74,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzV-Yu-7Io">
-                                <rect key="frame" x="67" y="100" width="253" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzV-Yu-7Io">
+                                <rect key="frame" x="167" y="99" width="41.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Track" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9aM-mW-0NB">
-                                <rect key="frame" x="67" y="155" width="240" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9aM-mW-0NB">
+                                <rect key="frame" x="166" y="155" width="42.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Album" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MrQ-eW-M7v">
-                                <rect key="frame" x="67" y="209" width="240" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ynd-nJ-uiE">
-                                <rect key="frame" x="67" y="292" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ouk-73-iAB">
-                                <rect key="frame" x="132" y="449" width="111" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ouk-73-iAB">
+                                <rect key="frame" x="132" y="562" width="111" height="30"/>
                                 <state key="normal" title="Add to Favorites"/>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f9h-D6-ZaP">
+                                <rect key="frame" x="67" y="292" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="7s5-wb-pnW"/>
+                                    <constraint firstAttribute="width" constant="240" id="Je4-6x-KmJ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MrQ-eW-M7v">
+                                <rect key="frame" x="162.5" y="211" width="49" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dzV-Yu-7Io" firstAttribute="centerX" secondItem="YDo-m3-NdD" secondAttribute="centerX" id="1wz-QV-tRu"/>
+                            <constraint firstItem="f9h-D6-ZaP" firstAttribute="top" secondItem="MrQ-eW-M7v" secondAttribute="bottom" constant="60" id="7PN-NW-eSw"/>
+                            <constraint firstItem="dzV-Yu-7Io" firstAttribute="top" secondItem="COF-AZ-ezl" secondAttribute="top" constant="35" id="I2t-xo-sGe"/>
+                            <constraint firstItem="MrQ-eW-M7v" firstAttribute="top" secondItem="9aM-mW-0NB" secondAttribute="bottom" constant="35" id="IqH-rZ-vgc"/>
+                            <constraint firstItem="9aM-mW-0NB" firstAttribute="top" secondItem="dzV-Yu-7Io" secondAttribute="bottom" constant="35" id="NCe-WI-y5o"/>
+                            <constraint firstItem="9aM-mW-0NB" firstAttribute="centerX" secondItem="YDo-m3-NdD" secondAttribute="centerX" id="NKb-LJ-hna"/>
+                            <constraint firstItem="ouk-73-iAB" firstAttribute="centerX" secondItem="YDo-m3-NdD" secondAttribute="centerX" id="Op9-Mq-rPR"/>
+                            <constraint firstItem="ouk-73-iAB" firstAttribute="top" secondItem="f9h-D6-ZaP" secondAttribute="bottom" constant="30" id="frj-AS-i8i"/>
+                            <constraint firstItem="f9h-D6-ZaP" firstAttribute="centerX" secondItem="YDo-m3-NdD" secondAttribute="centerX" id="hGA-fa-JU2"/>
+                            <constraint firstItem="MrQ-eW-M7v" firstAttribute="centerX" secondItem="YDo-m3-NdD" secondAttribute="centerX" id="lMC-b7-ryH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="COF-AZ-ezl"/>
                     </view>
                     <navigationItem key="navigationItem" title="Now Playing" id="K5k-1P-y8h"/>
                     <connections>
-                        <outlet property="albumArtView" destination="ynd-nJ-uiE" id="nHU-4M-lDC"/>
+                        <outlet property="albumArtView" destination="f9h-D6-ZaP" id="hFT-JZ-ieO"/>
                         <outlet property="albumLabel" destination="MrQ-eW-M7v" id="mH8-Gd-5ne"/>
                         <outlet property="artistLabel" destination="dzV-Yu-7Io" id="dPB-5M-ktT"/>
                         <outlet property="trackLabel" destination="9aM-mW-0NB" id="Ea7-Mg-T0F"/>
