@@ -12,6 +12,9 @@ class FavoritesTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // reload saved favorites
+        favorites.reload()
     }
 
     override func viewWillAppear(_ animated: Bool) {

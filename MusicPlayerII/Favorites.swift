@@ -33,6 +33,20 @@ class Favorites {
             print("error writing favorite tracks file")
         }
     }
+    
+    // reloads favorite tracks array from disk
+    func reload() {
+        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let archiveURL = documentsDirectory[0].appendingPathComponent("favoriteTracksData").appendingPathExtension("plist")
+        
+        let propertyListDecoder = PropertyListDecoder()
+        if let retrievedData = try? Data(contentsOf: archiveURL),
+            let decodedFavorites = try? propertyListDecoder.decode([Track].self, from: retrievedData) {
+            print("we decoded favorites!")
+            favorites.favoriteTracks = decodedFavorites
+        }
+        
+    }
 }
 
 let favorites = Favorites()
