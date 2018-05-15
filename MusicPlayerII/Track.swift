@@ -12,6 +12,7 @@ import Foundation
 struct Track: Codable {
     let artist: String?
     let track: String?
+    let trackId: Int?
     let artwork: String?
     let previewURL: String?
     let collectionName: String?
@@ -19,6 +20,7 @@ struct Track: Codable {
     enum CodingKeys: String, CodingKey {
         case artist = "artistName"
         case track = "trackName"
+        case trackId = "trackId"
         case artwork = "artworkUrl60"
         case previewURL = "previewUrl"
         case collectionName = "collectionName"

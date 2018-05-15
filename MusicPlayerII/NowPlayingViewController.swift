@@ -63,7 +63,18 @@ class NowPlayingViewController: UIViewController {
     
     @IBAction func addToFavoritesPressed(_ sender: UIButton) {
         if currentTrack != nil {
-            favorites.favoriteTracks.append(currentTrack!)
+            var duplicateTrackId: Int?
+            for track in favorites.favoriteTracks {
+                // check if find trackId (unique) within favorite tracks
+                if track.trackId == currentTrack?.trackId {
+                    duplicateTrackId = currentTrack?.trackId!
+                }
+            }
+            
+            // if no duplicate found, then append the new track
+            if duplicateTrackId == nil {
+                favorites.favoriteTracks.append(currentTrack!)
+            }
         }
     }
     
