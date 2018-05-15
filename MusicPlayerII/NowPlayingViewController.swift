@@ -60,4 +60,11 @@ class NowPlayingViewController: UIViewController {
         }
         task.resume()
     }
+    
+    @IBAction func addToFavoritesPressed(_ sender: UIButton) {
+        if currentTrack != nil {
+            favorites.favoriteTracks.append(currentTrack!)
+        }
+    }
+    
 }

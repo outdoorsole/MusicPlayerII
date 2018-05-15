@@ -89,6 +89,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ouk-73-iAB">
                                 <rect key="frame" x="132" y="562" width="111" height="30"/>
                                 <state key="normal" title="Add to Favorites"/>
+                                <connections>
+                                    <action selector="addToFavoritesPressed:" destination="eap-K3-Ehc" eventType="touchUpInside" id="p0V-gH-gE6"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f9h-D6-ZaP">
                                 <rect key="frame" x="67" y="292" width="240" height="240"/>
@@ -134,7 +137,7 @@
         <!--Favorites-->
         <scene sceneID="S6B-CX-CIc">
             <objects>
-                <tableViewController id="0b5-9q-Nce" sceneMemberID="viewController">
+                <tableViewController id="0b5-9q-Nce" customClass="FavoritesTableViewController" customModule="MusicPlayerII" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="jgd-0h-IgN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

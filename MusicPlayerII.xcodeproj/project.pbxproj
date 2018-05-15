@@ -16,6 +16,8 @@
 		16CC69DC20A1703300DAE0BA /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CC69DB20A1703300DAE0BA /* Track.swift */; };
 		16CC69DE20A1729A00DAE0BA /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CC69DD20A1729A00DAE0BA /* Results.swift */; };
 		16CC69E020A1740A00DAE0BA /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CC69DF20A1740A00DAE0BA /* Networking.swift */; };
+		16FC9F7C20AA8262009453C6 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FC9F7B20AA8262009453C6 /* Favorites.swift */; };
+		16FC9F7E20AA85BE009453C6 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FC9F7D20AA85BE009453C6 /* FavoritesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		16CC69DB20A1703300DAE0BA /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		16CC69DD20A1729A00DAE0BA /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
 		16CC69DF20A1740A00DAE0BA /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		16FC9F7B20AA8262009453C6 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
+		16FC9F7D20AA85BE009453C6 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +71,9 @@
 				16CC69DD20A1729A00DAE0BA /* Results.swift */,
 				16CC69DF20A1740A00DAE0BA /* Networking.swift */,
 				16CC69C720A1604400DAE0BA /* Main.storyboard */,
+				16FC9F7B20AA8262009453C6 /* Favorites.swift */,
 				16CC69D520A168E000DAE0BA /* SearchTableViewController.swift */,
+				16FC9F7D20AA85BE009453C6 /* FavoritesTableViewController.swift */,
 				16CC69D920A16DA200DAE0BA /* NowPlayingViewController.swift */,
 				16CC69CA20A1604400DAE0BA /* Assets.xcassets */,
 				16CC69CC20A1604400DAE0BA /* LaunchScreen.storyboard */,
@@ -151,7 +157,9 @@
 				16CC69C420A1604400DAE0BA /* AppDelegate.swift in Sources */,
 				16CC69DA20A16DA200DAE0BA /* NowPlayingViewController.swift in Sources */,
 				16CC69D620A168E000DAE0BA /* SearchTableViewController.swift in Sources */,
+				16FC9F7E20AA85BE009453C6 /* FavoritesTableViewController.swift in Sources */,
 				16CC69E020A1740A00DAE0BA /* Networking.swift in Sources */,
+				16FC9F7C20AA8262009453C6 /* Favorites.swift in Sources */,
 				16CC69DC20A1703300DAE0BA /* Track.swift in Sources */,
 				16CC69DE20A1729A00DAE0BA /* Results.swift in Sources */,
 			);
