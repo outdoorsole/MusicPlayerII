@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class NowPlayingViewController: UIViewController {
     @IBOutlet weak var artistLabel: UILabel!
@@ -15,6 +16,7 @@ class NowPlayingViewController: UIViewController {
     @IBOutlet weak var albumArtView: UIView!
     
     var currentTrack: Track?
+    var player = AVPlayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,5 +26,12 @@ class NowPlayingViewController: UIViewController {
         artistLabel.text = currentTrack?.artist
         trackLabel.text = currentTrack?.track
         albumLabel.text = currentTrack?.collectionName
+        
+        // play the track
+        if let previewURLString = currentTrack?.previewURL,
+            let previewURL = URL(string: previewURLString) {
+            player = AVPlayer(url: previewURL)
+            player.play()
+        }
     }
 }
