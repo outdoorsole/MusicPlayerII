@@ -20,5 +20,9 @@ class NowPlayingViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        // Set the text labels
+        artistLabel.text = currentTrack?.artist
+        trackLabel.text = currentTrack?.track
+        albumLabel.text = currentTrack?.collectionName
     }
 }
